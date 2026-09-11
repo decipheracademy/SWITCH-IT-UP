@@ -605,14 +605,14 @@ body,
 }
 
 .value-btn:hover:not(:disabled) {
-  background: rgba(24, 217, 255, 0.3);
-  box-shadow: 0 0 14px rgba(24, 217, 255, 0.5);
-  transform: translateY(-2px);
+  background: inherit;
+  box-shadow: none;
+  transform: none;
 }
 
 .value-btn:disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
+  opacity: 1;
+  cursor: pointer;
 }
 
 .btn-traceback {
@@ -1147,8 +1147,8 @@ input:focus-visible,
 }
 
 .value-btn:focus-visible {
-  outline: 3px solid var(--c-orange);
-  outline-offset: 2px;
+  outline: none;
+  box-shadow: none;
 }
 
 /* ---------- Reduced motion ---------- */
