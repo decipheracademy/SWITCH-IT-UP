@@ -108,8 +108,15 @@ export class CameraManager {
     // stacked column (palette above Trace Back) and may also show the
     // pan controller, both taller, so that case reserves more space.
     const isStackedHud = width < 700;
-    const reservedTop = height < 500 ? 56 : 64;
-    const reservedBottom = isStackedHud ? (height < 500 ? 190 : 216) : height < 500 ? 96 : 120;
+const reservedTop = height < 500 ? 56 : 64;
+
+const reservedBottom = isStackedHud
+  ? height < 700
+    ? 285
+    : 235
+  : height < 500
+    ? 96
+    : 120;
     const usableHeight = Math.max(height - reservedTop - reservedBottom, height * 0.4);
     const usableAspect = width / usableHeight;
 
