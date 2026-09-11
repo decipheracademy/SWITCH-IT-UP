@@ -327,8 +327,7 @@ export class GameHUD implements Screen {
           // no glow, no highlight distinguishes it from the rest. Once
           // a Dead End is active, every value is disabled — normal
           // input is locked until Trace Back (Build 03 spec §17).
-          const disabled = isDeadEnd || !hasSelection || !this.gameState.isValueAllowedForSelection(v);
-          return `<button class="value-btn" data-value="${v}" aria-label="Place value ${displayValues[i]}" ${disabled ? "disabled" : ""}>${displayValues[i]}</button>`;
+          return `<button class="value-btn" data-value="${v}" aria-label="Place value ${displayValues[i]}">${displayValues[i]}</button>`;
         })
         .join("");
       paletteEl.querySelectorAll<HTMLButtonElement>(".value-btn").forEach((btn) => {
